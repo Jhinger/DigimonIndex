@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>var exports = {};</script>
+    <script src="./js/DejimonModel.js" defer></script>
+    <script src="./js/DejimonService.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <title>Dejimon Index</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Dejimon Index</h1>
+    </header>
+
+    <section class="info-table">
+        <h1 class="info-heading">More Info: </h1>
+        <div class="info-cell" id="info-id"></div>
+        <div class="info-cell" id="info-name"></div>
+        <div class="info-cell" id="info-height"></div>
+        <div class="info-cell" id="info-weight"></div>
+        <div class="info-cell" id="info-type"></div>
+        <div class="info-cell" id="info-ability"></div>
+        <div class="info-cell" id="info-abilityPower"></div>
+        <div class="info-cell" id="info-overallStrength"></div>
+    </section>
+
+    <main class="main">
+        <table class="main-table" id="index-table">
+          <!--  <h3 class="main-table-title">Current Degimon:</h3> -->
+            <thead class="main-table-head">
+                <tr class="main-table-row">
+                    <th class="main-table-head-cell">Name</th>
+                    <th class="main-table-head-cell">Type</th>
+                    <th class="main-table-head-cell">Info</th>
+                    <th class="main-table-head-cell">Other</th>
+                </tr>
+            </thead>
+            <tbody id="main-table-body">
+                <tr class="main-table-row hover-row">
+                    <td class="main-table-body-cell">Gurshan Jhinger</td>
+                    <td class="main-table-body-cell">Yorkshire</td>
+                    <td class="main-table-body-cell">Info</td>
+                    <td class="main-table-body-cell">Not Editable</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="main-section">
+            <form class="section-form" id="deji-form">
+                <label class="form-label" for="dejiName">Name:</label>
+                <input placeholder="ex. John Doe" class="form-input" type="text" id="dejiName">
+
+                <label class="form-label" for="dejiType">Type:</label>
+                <select class="form-input" type="text" id="dejiType">
+                    <option value="Yorkshire">Yorkshire</option>
+                    <option value="Lean">Lean</option>
+                    <option value="Potbelly">Potbelly</option>
+                </select>    
+
+                <label class="form-label" for="dejiHeight">Height (Hocks):</label>
+                <input placeholder="ex. 23" class="form-input" type="number" id="dejiHeight">
+
+                <label class="form-label" for="dejiWeight">Weight (Stones):</label>
+                <input placeholder="ex. 383" class="form-input" type="number" id="dejiWeight">
+
+                <label class="form-label" for="dejiAbility">Ability:</label>
+                <select class="form-input" type="text" id="dejiAbility">
+                    <option id="water" value="Water">Water</option>
+                    <option id="ice" value="Ice">Ice</option>
+                    <option id="fire" value="Fire" disabled>Fire</option>
+                    <option id="charm" value="Charm" disabled>Charm</option>
+                    <option id="electric" value="Electric" disabled>Electric</option>
+                </select>
+
+                <label class="form-label" for="dejiAbilityPower">Ability Power:</label>
+                <input class="form-input" type="number" id="dejiAbilityPower" min="0" max="100" placeholder="[0, 100]">
+
+                <button class="form-submit" id="deji-form-submit" form="deji-form" type="submit">ADD DEJIMON</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
